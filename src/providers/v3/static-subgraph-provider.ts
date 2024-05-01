@@ -188,6 +188,33 @@ const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     USDC_MOONBEAM,
     WBTC_MOONBEAM,
   ],
+  [ChainId.BITLAYER]: [
+    WRAPPED_NATIVE_CURRENCY[ChainId.BITLAYER],
+  ],
+  [ChainId.BITLAYER_TESTNET]: [
+    WRAPPED_NATIVE_CURRENCY[ChainId.BITLAYER_TESTNET],
+  ],
+  [ChainId.CYBER]: [
+    WRAPPED_NATIVE_CURRENCY[ChainId.CYBER],
+  ],
+  [ChainId.CYBER_TESTNET]: [
+    WRAPPED_NATIVE_CURRENCY[ChainId.CYBER_TESTNET],
+    DAI_MOONBEAM,
+    USDC_MOONBEAM,
+    WBTC_MOONBEAM,
+  ],
+  [ChainId.Linea]: [
+    WRAPPED_NATIVE_CURRENCY[ChainId.Linea],
+    DAI_MOONBEAM,
+    USDC_MOONBEAM,
+    WBTC_MOONBEAM,
+  ],
+  [ChainId.LINEA_SEPOLIA]: [
+    WRAPPED_NATIVE_CURRENCY[ChainId.LINEA_SEPOLIA],
+    DAI_MOONBEAM,
+    USDC_MOONBEAM,
+    WBTC_MOONBEAM,
+  ],
 };
 
 /**
@@ -205,7 +232,7 @@ export class StaticV3SubgraphProvider implements IV3SubgraphProvider {
   constructor(
     private chainId: ChainId,
     private poolProvider: IV3PoolProvider
-  ) {}
+  ) { }
 
   public async getPools(
     tokenIn?: Token,

@@ -43,6 +43,7 @@ export const V3_CORE_FACTORY_ADDRESSES: AddressMap = {
   [ChainId.OPTIMISM_GOERLI]: OPTIMISM_GOERLI_V3_CORE_FACTORY_ADDRESSES,
   [ChainId.ARBITRUM_GOERLI]: ARBITRUM_GOERLI_V3_CORE_FACTORY_ADDRESSES,
   [ChainId.BSC]: BSC_V3_CORE_FACTORY_ADDRESSES,
+
   // TODO: Gnosis + Moonbeam contracts to be deployed
 };
 
@@ -190,6 +191,48 @@ export const WETH9: {
   [ChainId.ARBITRUM_GOERLI]: new Token(
     ChainId.ARBITRUM_GOERLI,
     '0xe39Ab88f8A4777030A534146A9Ca3B52bd5D43A3',
+    18,
+    'WETH',
+    'Wrapped Ether'
+  ),
+  [ChainId.BITLAYER]: new Token(
+    ChainId.BITLAYER,
+    '0x3e57d6946f893314324C975AA9CEBBdF3232967E',
+    18,
+    'WBTC',
+    'Wrapped WBTC'
+  ),
+  [ChainId.BITLAYER_TESTNET]: new Token(
+    ChainId.BITLAYER_TESTNET,
+    '0x3e57d6946f893314324C975AA9CEBBdF3232967E',
+    18,
+    'WBTC',
+    'Wrapped WBTC'
+  ),
+  [ChainId.CYBER]: new Token(
+    ChainId.CYBER,
+    '0x3e57d6946f893314324C975AA9CEBBdF3232967E',
+    18,
+    'WETH',
+    'Wrapped Ether'
+  ),
+  [ChainId.CYBER_TESTNET]: new Token(
+    ChainId.CYBER_TESTNET,
+    '0x4200000000000000000000000000000000000006',
+    18,
+    'WETH',
+    'Wrapped Ether'
+  ),
+  [ChainId.Linea]: new Token(
+    ChainId.Linea,
+    '0x4200000000000000000000000000000000000006',
+    18,
+    'WETH',
+    'Wrapped Ether'
+  ),
+  [ChainId.LINEA_SEPOLIA]: new Token(
+    ChainId.LINEA_SEPOLIA,
+    '0x06565ed324Ee9fb4DB0FF80B7eDbE4Cb007555a3',
     18,
     'WETH',
     'Wrapped Ether'
