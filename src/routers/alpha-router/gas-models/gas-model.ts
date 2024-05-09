@@ -19,12 +19,14 @@ import {
   DAI_ROPSTEN,
   USDC_ARBITRUM,
   USDC_ARBITRUM_GOERLI,
+  USDC_BASE,
   USDC_BSC,
   USDC_ETHEREUM_GNOSIS,
   USDC_GÖRLI,
   USDC_KOVAN,
   USDC_MAINNET,
   USDC_MOONBEAM,
+  USDC_NATIVE_BASE,
   USDC_OPTIMISM,
   USDC_OPTIMISM_GOERLI,
   USDC_OPTIMISTIC_KOVAN,
@@ -85,6 +87,7 @@ export const usdGasTokensByChain: { [chainId in ChainId]?: Token[] } = {
   [ChainId.GNOSIS]: [USDC_ETHEREUM_GNOSIS],
   [ChainId.MOONBEAM]: [USDC_MOONBEAM],
   [ChainId.BSC]: [USDT_BSC, USDC_BSC, DAI_BSC],
+  [ChainId.BASE]: [USDC_BASE, USDC_NATIVE_BASE],
 };
 
 export type L1ToL2GasCosts = {
@@ -101,8 +104,8 @@ export type BuildOnChainGasModelFactoryType = {
   quoteToken: Token;
   v2poolProvider: IV2PoolProvider;
   l2GasDataProvider?:
-    | IL2GasDataProvider<OptimismGasData>
-    | IL2GasDataProvider<ArbitrumGasData>;
+  | IL2GasDataProvider<OptimismGasData>
+  | IL2GasDataProvider<ArbitrumGasData>;
 };
 
 export type BuildV2GasModelFactoryType = {

@@ -47,6 +47,10 @@ export const BASE_SWAP_COST = (id: ChainId): BigNumber => {
       return BigNumber.from(2000);
     case ChainId.LINEA_SEPOLIA:
       return BigNumber.from(2000);
+    case ChainId.BASE:
+      return BigNumber.from(2000);
+    case ChainId.BASE_GOERLI:
+      return BigNumber.from(2000);
   }
 };
 export const COST_PER_INIT_TICK = (id: ChainId): BigNumber => {
@@ -88,6 +92,10 @@ export const COST_PER_INIT_TICK = (id: ChainId): BigNumber => {
       return BigNumber.from(31000);
     case ChainId.BITLAYER:
       return BigNumber.from(31000);
+    case ChainId.BASE:
+      return BigNumber.from(31000);
+    case ChainId.BASE_GOERLI:
+      return BigNumber.from(31000);
   }
 };
 
@@ -128,6 +136,10 @@ export const COST_PER_HOP = (id: ChainId): BigNumber => {
     case ChainId.LINEA:
       return BigNumber.from(80000);
     case ChainId.LINEA_SEPOLIA:
+      return BigNumber.from(80000);
+    case ChainId.BASE:
+      return BigNumber.from(80000);
+    case ChainId.BASE_GOERLI:
       return BigNumber.from(80000);
   }
 };

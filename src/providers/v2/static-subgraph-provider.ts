@@ -8,6 +8,7 @@ import {
   DAI_MAINNET,
   DAI_RINKEBY_1,
   DAI_RINKEBY_2,
+  USDC_BASE,
   USDC_MAINNET,
   USDT_MAINNET,
   WBTC_MAINNET,
@@ -55,6 +56,8 @@ const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   [ChainId.CYBER_TESTNET]: [],
   [ChainId.LINEA]: [],
   [ChainId.LINEA_SEPOLIA]: [],
+  [ChainId.BASE_GOERLI]: [],
+  [ChainId.BASE]: [WRAPPED_NATIVE_CURRENCY[ChainId.BASE], USDC_BASE],
 };
 
 /**

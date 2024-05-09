@@ -25,7 +25,9 @@ export enum ChainId {
   CYBER = 7560,
   CYBER_TESTNET = 111557560,
   LINEA = 59144,
-  LINEA_SEPOLIA = 59141
+  LINEA_SEPOLIA = 59141,
+  BASE = 8453,
+  BASE_GOERLI = 84531
 }
 
 // WIP: Gnosis, Moonbeam
@@ -52,6 +54,8 @@ export const SUPPORTED_CHAINS: ChainId[] = [
   ChainId.CYBER_TESTNET,
   ChainId.LINEA,
   ChainId.LINEA_SEPOLIA,
+  ChainId.BASE,
+  ChainId.BASE_GOERLI,
   // Gnosis and Moonbeam don't yet have contracts deployed yet
 ];
 
@@ -136,6 +140,10 @@ export const ID_TO_CHAIN_ID = (id: number): ChainId => {
       return ChainId.LINEA;
     case 59141:
       return ChainId.LINEA_SEPOLIA;
+    case 8453:
+      return ChainId.BASE;
+    case 84531:
+      return ChainId.BASE_GOERLI;
     default:
       throw new Error(`Unknown chain id: ${id}`);
   }
@@ -164,8 +172,10 @@ export enum ChainName {
   BITLAYER_TESTNET = 'bitlayer_testnet',
   CYBER = 'cyber',
   CYBER_TESTNET = 'cyber_testnet',
-  LINEA = 'linea',
-  LINEA_SEPOLIA = 'linea_sepolia',
+  LINEA = 'linea-mainnet',
+  LINEA_SEPOLIA = 'linea-sepolia',
+  BASE = 'base-mainnet',
+  BASE_GOERLI = 'base-goerli',
 }
 
 
@@ -279,6 +289,16 @@ export const NATIVE_NAMES_BY_ID: { [chainId: number]: string[] } = {
     'ETHER',
     '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
   ],
+  [ChainId.BASE]: [
+    'ETH',
+    'ETHER',
+    '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
+  ],
+  [ChainId.BASE_GOERLI]: [
+    'ETH',
+    'ETHER',
+    '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
+  ],
 };
 
 export const NATIVE_CURRENCY: { [chainId: number]: NativeCurrencyName } = {
@@ -306,6 +326,8 @@ export const NATIVE_CURRENCY: { [chainId: number]: NativeCurrencyName } = {
   [ChainId.CYBER_TESTNET]: NativeCurrencyName.ETHER,
   [ChainId.LINEA]: NativeCurrencyName.ETHER,
   [ChainId.LINEA_SEPOLIA]: NativeCurrencyName.ETHER,
+  [ChainId.BASE]: NativeCurrencyName.ETHER,
+  [ChainId.BASE_GOERLI]: NativeCurrencyName.ETHER,
 };
 
 export const ID_TO_NETWORK_NAME = (id: number): ChainName => {
@@ -358,6 +380,10 @@ export const ID_TO_NETWORK_NAME = (id: number): ChainName => {
       return ChainName.LINEA;
     case 59141:
       return ChainName.LINEA_SEPOLIA;
+    case 8453:
+      return ChainName.BASE;
+    case 84531:
+      return ChainName.BASE_GOERLI;
     default:
       throw new Error(`Unknown chain id: ${id}`);
   }
@@ -410,9 +436,13 @@ export const ID_TO_PROVIDER = (id: ChainId): string => {
     case ChainId.CYBER_TESTNET:
       return process.env.JSON_RPC_PROVIDER_BSC!;
     case ChainId.LINEA:
-      return process.env.JSON_RPC_PROVIDER_BSC!;
+      return process.env.JSON_RPC_PROVIDER_LINEA!;
     case ChainId.LINEA_SEPOLIA:
-      return process.env.JSON_RPC_PROVIDER_BSC!;
+      return process.env.JSON_RPC_PROVIDER_LINEA_SEPOLIA!;
+    case ChainId.BASE:
+      return process.env.JSON_RPC_PROVIDER_BASE!;
+    case ChainId.BASE_GOERLI:
+      return process.env.JSON_RPC_PROVIDER_BASE_GOERLI!;
     default:
       throw new Error(`Chain id: ${id} not supported`);
   }
@@ -588,6 +618,20 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId in ChainId]: Token } = {
     18,
     'WETH',
     'Wrapped WETH'
+  ),
+  [ChainId.BASE]: new Token(
+    ChainId.BASE,
+    '0x4200000000000000000000000000000000000006',
+    18,
+    'WETH',
+    'Wrapped Ether'
+  ),
+  [ChainId.BASE_GOERLI]: new Token(
+    ChainId.BASE_GOERLI,
+    '0x4200000000000000000000000000000000000006',
+    18,
+    'WETH',
+    'Wrapped Ether'
   ),
 };
 
