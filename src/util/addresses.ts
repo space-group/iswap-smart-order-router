@@ -225,7 +225,7 @@ export const WETH9: {
   ),
   [ChainId.Linea]: new Token(
     ChainId.Linea,
-    '0x4200000000000000000000000000000000000006',
+    '0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f',
     18,
     'WETH',
     'Wrapped Ether'
