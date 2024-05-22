@@ -61,7 +61,7 @@ exports.WETH9 = {
     [chains_1.ChainId.ARBITRUM_ONE]: new sdk_core_1.Token(chains_1.ChainId.ARBITRUM_ONE, '0x82aF49447D8a07e3bd95BD0d56f35241523fBab1', 18, 'WETH', 'Wrapped Ether'),
     [chains_1.ChainId.ARBITRUM_RINKEBY]: new sdk_core_1.Token(chains_1.ChainId.ARBITRUM_RINKEBY, '0xB47e6A5f8b33b3F17603C83a0535A9dcD7E32681', 18, 'WETH', 'Wrapped Ether'),
     [chains_1.ChainId.ARBITRUM_GOERLI]: new sdk_core_1.Token(chains_1.ChainId.ARBITRUM_GOERLI, '0xe39Ab88f8A4777030A534146A9Ca3B52bd5D43A3', 18, 'WETH', 'Wrapped Ether'),
-    [chains_1.ChainId.BITLAYER]: new sdk_core_1.Token(chains_1.ChainId.BITLAYER, '0x3e57d6946f893314324C975AA9CEBBdF3232967E', 18, 'WBTC', 'Wrapped WBTC'),
+    [chains_1.ChainId.BITLAYER]: new sdk_core_1.Token(chains_1.ChainId.BITLAYER, '0xfF204e2681A6fA0e2C3FaDe68a1B28fb90E4Fc5F', 18, 'WBTC', 'Wrapped WBTC'),
     [chains_1.ChainId.BITLAYER_TESTNET]: new sdk_core_1.Token(chains_1.ChainId.BITLAYER_TESTNET, '0x3e57d6946f893314324C975AA9CEBBdF3232967E', 18, 'WBTC', 'Wrapped WBTC'),
     [chains_1.ChainId.CYBER]: new sdk_core_1.Token(chains_1.ChainId.CYBER, '0x3e57d6946f893314324C975AA9CEBBdF3232967E', 18, 'WETH', 'Wrapped Ether'),
     [chains_1.ChainId.CYBER_TESTNET]: new sdk_core_1.Token(chains_1.ChainId.CYBER_TESTNET, '0x4200000000000000000000000000000000000006', 18, 'WETH', 'Wrapped Ether'),
